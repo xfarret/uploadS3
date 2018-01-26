@@ -1,0 +1,6 @@
+beanstalk:
+    address: 127.0.0.1
+    port: 32768
+restserver:
+    address: 127.0.0.1
+    port: 8000
