@@ -1,0 +1,13 @@
+dependencies:
+
+beanstalk:
+https://github.com/kr/beanstalk
+go get github.com/kr/beanstalk
+
+mux:
+https://github.com/gorilla/mux
+go get -u github.com/gorilla/mux
+
+yaml:
+http://gopkg.in/yaml.v2
+go get gopkg.in/yaml.v2

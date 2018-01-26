@@ -1,6 +1,11 @@
 beanstalk:
     address: 127.0.0.1
-    port: 32768
+    port: 32769
 restserver:
     address: 127.0.0.1
-    port: 8000
+    port: 6000
+aws:
+    bucket: my-bucket-name
+    key: MYKEYBUCKET
+    secret: MySecretKey
+    region: us-west-2

@@ -17,11 +17,17 @@ type Parameters struct {
 		Port 		string `yaml:"port"`
 
 	} `yaml:"beanstalk"`
-	RestServer   struct {
+	RestServer  struct {
 		Address     string `yaml:"address"`
 		Port 		string `yaml:"port"`
 
 	} `yaml:"restserver"`
+	AWS 		struct {
+		BucketName string `yaml:"bucket"`
+		Key        string `yaml:"key"`
+		Secret     string `yaml:"secret"`
+		Region     string `yaml:"region"`
+	} `yaml:"aws"`
 }
 
 
@@ -61,20 +67,6 @@ func init() {
 		log.Fatalf("Unmarshal: %v", err)
 	}
 }
-
-
-//func (c *Param) GetParameters() map[string][]string {
-//	yamlFile, err := ioutil.ReadFile("parameters.yml")
-//	if err != nil {
-//		log.Fatalf("yamlFile.Get err   #%v ", err)
-//	}
-//	err = yaml.Unmarshal(yamlFile, c)
-//	if err != nil {
-//		log.Fatalf("Unmarshal: %v", err)
-//	}
-//
-//	return c.Parameters
-//}
 
 func GetParameters() *Parameters {
 	return c
